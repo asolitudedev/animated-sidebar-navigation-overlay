@@ -4,17 +4,100 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Boilerplate - SolitudeDev</title>
+  <title>Animated Sidebar Navigation - SolitudeDev</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-  <!-- CSS icons CDN -->
-  <link href='https://unpkg.com/css.gg/icons/all.css' rel='stylesheet'>
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  
+  <!-- Sidebar -->
+  <div class="nav" id="sidebar">
+    <div class="btn-close" id="btn-close">
+      <ion-icon name="close-outline" class="icon"></ion-icon>
+    </div>
+
+    <div class="brand brand-nav">
+      <div class="flex">
+        <div class="icon icon-smile">
+          <ion-icon name="happy-outline" size="large" class="icon-brand"></ion-icon>
+        </div>
+        <h2>Smily</h2>
+      </div>
+    </div>
+
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#dashboard" class="nav-link flex active">
+          <ion-icon name="speedometer-outline" class="nav-icon"></ion-icon>
+          Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#message" class="nav-link flex">
+          <ion-icon name="chatbox-ellipses-outline" class="nav-icon"></ion-icon>
+          Messages
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#bookmark" class="nav-link flex">
+          <ion-icon name="bookmarks-outline" class="nav-icon"></ion-icon>
+          Bookmarks
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#gifts" class="nav-link flex">
+          <ion-icon name="gift-outline" class="nav-icon"></ion-icon>
+          Gifts
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#setting" class="nav-link flex">
+          <ion-icon name="settings-outline" class="nav-icon"></ion-icon>
+          Settings
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <div class="flex flex-between">
+        <span class="btn-menu" id="btn-menu">
+          <ion-icon name="menu-outline" class="icon"></ion-icon>
+        </span>
+
+        <h1 class="brand">Smily</h1>
+
+        <!-- Placeholder element for flex -->
+        <span class="icon"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="section" id="dashboard">
+      <h2>Dashboard</h2>
+    </div>
+    <div class="section" id="message">
+      <h2>Messages</h2>
+    </div>
+    <div class="section" id="bookmark">
+      <h2>Bookmarks</h2>
+    </div>
+    <div class="section" id="gift">
+      <h2>Gifts</h2>
+    </div>
+    <div class="section" id="setting">
+      <h2>Settings</h2>
+    </div>
+  </div>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!-- JavaScript -->
   <script async src="assets/js/main.js"></script>
 </body>

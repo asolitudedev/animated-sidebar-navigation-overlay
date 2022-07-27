@@ -1,9 +1,148 @@
-/*=== FONTS ===*/
+/*========== FONTS ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
-/*=== CSS VARIABLES ===*/
+/*========== CSS VARIABLES ==========*/
 :root {
+  /*========== Colors ==========*/
+  --color-primary: #62a72f;
+  --color-body: #eceef0;
+  --color-nav-link: #9a9a9a;
+
+  /*========== Size ==========*/
+  --nav-width-mobile: 90%;
+  --nav-width-tablet: 40%;
+  --nav-width-desktop: 250px;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Inter', sans-serif;
+  --font-weight-default: 400;
+  --font-weight-heading: 500;
 }
 
-/*=== BASE ===*/
+/*========== BASE ==========*/
+body {
+  margin: 0;
+  padding: 20px 0 0;
+  background-color: var(--color-body);
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-default);
+}
 
-/*=== REUSABLE CLASSES ===*/
+h1, h2, h3 {
+  margin: 0;
+  font-weight: var(--font-weight-heading);
+}
+
+/*========== REUSABLE CLASSES ==========*/
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  min-height: 900px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.flex-between {
+  justify-content: space-between;
+}
+/*========== COMPONENTS ==========*/
+/* Navigation */
+.nav {
+  background-color: #fff;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  box-shadow: 0 0 1px 0 rgb(0 0 0 / 12%), 0 1px 1px 0 rgb(0 0 0 / 22%);
+}
+.nav.nav-show {
+  width: var(--nav-width-mobile);
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  padding: 16px 32px;
+  text-decoration: none;
+  color: var(--color-nav-link);
+  transition: 0.5s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary)
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.btn-close {
+  position: absolute;
+  right: 30px;
+}
+
+/* Icons */
+.icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+/* Branding */
+.brand {
+  color: var(--color-primary);
+  padding-left: 30px;
+}
+.brand-nav {
+  margin-bottom: 40px;
+}
+.icon-smile {
+  background: #effbe5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px
+}
+.icon-brand {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+/*========== MEDIA QUERY ==========*/
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .nav.nav-show {
+    width: var(--nav-width-tablet);
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  body {
+    padding-left: var(--nav-width-desktop);
+  }
+  .nav {
+    width: var(--nav-width-desktop);
+  }
+  .btn-menu,
+  .btn-close {
+    display: none;
+  }
+}
